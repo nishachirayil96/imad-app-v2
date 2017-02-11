@@ -3,10 +3,15 @@ alert('Hi!');
 var element=document.getElementById('main-text');
 element.innerHTML='New value';
 
-
+var marginleft=0;
 
 var img=document.getElementById('madi');
+function moveright()
+{
+marginleft=marginleft+10;
+madi.style.marginLeft=marginleft+'px';
+}
 
 madi.onclick=function(){
-madi.style.marginLeft='108px';
+var interval=setInterval(moveright,100);
 };
