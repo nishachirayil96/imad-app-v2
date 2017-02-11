@@ -102,16 +102,19 @@ app.get('/:articlename',function(req,res)
 {
     //articlename==article-one..url name
     //articles[articlename]==content of the object of article-one
+    var articlename=req.params.articlename;
  res.send(createtemplate(articles[articlename]));
 });
 
 app.get('/:articlename',function(req,res)
 {
+     var articlename=req.params.articlename;
 res.send(createtemplate(articles[articlename]));
 });
 
 app.get('/:articlename',function(req,res)
 {
+     var articlename=req.params.articlename;
 res.send(createtemplate(articles[articlename]));
 });
 
