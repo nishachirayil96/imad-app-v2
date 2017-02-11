@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var articles={
-    articleone :{
+    'article-one' :{
         title:'Article one',
         heading:'Article one',
         date:'11th febuary 2017',
@@ -23,7 +23,7 @@ var articles={
                     `
         
     },
-    articletwo :{
+    'article-two' :{
         title:'Article Two',
         heading:'Article two',
         date:'1th febuary 2017',
@@ -38,7 +38,7 @@ var articles={
                     </p>`
         
     },
-    articlethree :{
+    'article-three' :{
         title:'Article three',
         heading:'Article three',
         date:'1th febuary 2017',
@@ -98,19 +98,21 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function(req,res)
+app.get('/:articlename',function(req,res)
 {
- res.send(createtemplate(articleone));
+    //articlename==article-one..url name
+    //articles[articlename]==content of the object of article-one
+ res.send(createtemplate(articles[articlename]));
 });
 
-app.get('/article-two',function(req,res)
+app.get('/:articlename',function(req,res)
 {
-res.send(createtemplate(articletwo));
+res.send(createtemplate(articles[articlename]));
 });
 
-app.get('/article-three',function(req,res)
+app.get('/:articlename',function(req,res)
 {
-res.send(createtemplate(articlethree));
+res.send(createtemplate(articles[articlename]));
 });
 
 //if this particular url path is requested this function is excecuted
