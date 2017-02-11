@@ -88,7 +88,7 @@ function createtemplate(data)
             </div>
                 
         </body>
-    </html>`
+    </html>`;
     
     return htmltemplate;
 }
