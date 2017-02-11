@@ -1,14 +1,17 @@
-var express = require('express');
-var morgan = require('morgan');
+var express = require('express');//create web server        
+var morgan = require('morgan');//output logs what request are coming and how we are handling
 var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
 
+//send content of ui/index.html 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+
+//if this particular url path is requested this function is excecuted
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
