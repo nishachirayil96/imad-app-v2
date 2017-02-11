@@ -5,7 +5,7 @@ element.innerHTML='New value';
 
 
 
-var element=document.getElementById('madi');
+var img=document.getElementById('madi');
 
 madi.onclick=function(){
 ing.style.marginLeft='108px';
