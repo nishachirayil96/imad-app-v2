@@ -106,17 +106,7 @@ app.get('/:articlename',function(req,res)
  res.send(createtemplate(articles[articlename]));
 });
 
-app.get('/:articlename',function(req,res)
-{
-     var articlename=req.params.articlename;
-res.send(createtemplate(articles[articlename]));
-});
 
-app.get('/:articlename',function(req,res)
-{
-     var articlename=req.params.articlename;
-res.send(createtemplate(articles[articlename]));
-});
 
 //if this particular url path is requested this function is excecuted
 app.get('/ui/style.css', function (req, res) {
